@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "808433136530",
+    "project_id": "skin-sell",
+    "storage_bucket": "skin-sell.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808433136530:android:95be66ea5491d6d73c874b",
+        "android_client_info": {
+          "package_name": "com.example.skinsell"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808433136530-2265mf8t70ouh926163u3v1esiqjpd33.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.skinsell",
+            "certificate_hash": "44cc488f34d8ea81089ff0fc12db61c209b622a0"
+          }
+        },
+        {
+          "client_id": "808433136530-k0r7f3a60b1s92d3cg3u7c6fbht2vsej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXfXPu-dqz7CX7ujEuVt6kIHwU0k1S36c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808433136530-k0r7f3a60b1s92d3cg3u7c6fbht2vsej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
