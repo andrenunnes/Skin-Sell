@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/drawable/background_edittext.xml" value="0.3828125" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/activity_anuncios.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/activity_cadastrar_anuncio.xml" value="0.33" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/activity_cadastro.xml" value="0.33" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/activity_meus_anuncios.xml" value="0.33" />
+        <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/adapter_anuncios.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/content_menu_anuncios.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/recycle_anuncios.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/menu/menu_main.xml" value="0.25" />

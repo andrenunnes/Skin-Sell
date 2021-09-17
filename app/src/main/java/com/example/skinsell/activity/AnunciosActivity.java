@@ -63,8 +63,20 @@ public class AnunciosActivity extends AppCompatActivity {
     }
 
     public void criarAnuncios(){
-        Anuncio anuncio = new Anuncio("https://biografiaresumida.com.br/wp-content/uploads/2017/11/007ESQ_Fabio_Lago_002-768x433.jpg", "bota", "300.00");
+        Anuncio anuncio = new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
+        Anuncio anuncio1 = new Anuncio("https://i.etsystatic.com/23459530/r/il/af0251/2412165606/il_1140xN.2412165606_dd7t.jpg ","Karambit Lore", "R$4000.00");
+        Anuncio anuncio2 = new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
+        Anuncio anuncio3= new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
+        Anuncio anuncio4= new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
+        Anuncio anuncio5= new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
+
         this.listaAnuncios.add(anuncio);
+        this.listaAnuncios.add(anuncio1);
+        this.listaAnuncios.add(anuncio2);
+        this.listaAnuncios.add(anuncio3);
+        this.listaAnuncios.add(anuncio4);
+        this.listaAnuncios.add(anuncio5);
+
     }
 
     public void verificarUsuario(){
@@ -104,6 +116,7 @@ public class AnunciosActivity extends AppCompatActivity {
             case R.id.menu_sair:
                 autenticacao.signOut();
                 invalidateOptionsMenu();
+                verificarUsuario();
                 break;
             case R.id.menu_anuncios:
                 startActivity(new Intent(getApplicationContext(), MeusAnunciosActivity.class));
