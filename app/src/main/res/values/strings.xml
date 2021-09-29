@@ -1,6 +1,33 @@
 <resources>
     <string name="app_name">Skin Sell</string>
     <string name="title_activity_meus_anuncios">MeusAnunciosActivity</string>
+    <string-array name="armas">
+        <item>AK-47</item>
+        <item>AUG</item>
+        <item>AWP</item>
+        <item>Baioneta</item>
+        <item>Baioneta M9</item>
+        <item>Berettas Duplas</item>
+        <item>Canivete</item>
+        <item>Canivete Borboleta</item>
+        <item>M4A4</item>
+        <item>M4A1-S</item>
+    </string-array>
+
+    <string-array name="categoria">
+        <item>Nova de Fábrica</item>
+        <item>Pouca Usada</item>
+        <item>Testada em Campo</item>
+        <item>Bem Desgastada</item>
+        <item>Veterana de Guerra</item>
+        <item>Não pintada</item>
+    </string-array>
+
+    <string-array name="stattrack">
+        <item>Normal</item>
+        <item>StatTrack</item>
+        <item>Lembrança</item>
+    </string-array>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

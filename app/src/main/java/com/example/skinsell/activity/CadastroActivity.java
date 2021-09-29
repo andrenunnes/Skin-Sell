@@ -3,6 +3,7 @@ package com.example.skinsell.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Base64;
 import android.view.View;
@@ -82,6 +83,9 @@ public class CadastroActivity extends AppCompatActivity {
                     usuario.salvar();
 
                     Toast.makeText(CadastroActivity.this, "Cadastro Efetuado!", Toast.LENGTH_SHORT).show();
+
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    finish();
                 }else{
 
                     String excecao = "";

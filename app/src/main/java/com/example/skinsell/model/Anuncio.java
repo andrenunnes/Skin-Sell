@@ -4,6 +4,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.skinsell.config.ConfiguracaoFirebase;
+import com.google.firebase.database.DatabaseReference;
+
 public class Anuncio {
     private String foto;
     private String titulo;
@@ -13,10 +16,14 @@ public class Anuncio {
 
     }
 
+
     public Anuncio(String foto, String titulo, String preco) {
         this.foto = foto;
         this.titulo = titulo;
         this.preco = preco;
+    }
+
+    public Anuncio(String titulo, String preco) {
     }
 
     public String getFoto() {

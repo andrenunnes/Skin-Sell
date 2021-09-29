@@ -3,11 +3,13 @@ package com.example.skinsell.config;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class ConfiguracaoFirebase {
 
     private static FirebaseAuth autenticacao;
     private static DatabaseReference firebase;
+    private static FirebaseFirestore firebaseFirestore;
 
     public static DatabaseReference getFirebaseDatabase(){
         if (firebase == null){
@@ -22,6 +24,13 @@ public class ConfiguracaoFirebase {
         }
         return autenticacao;
 
+    }
+
+    public static FirebaseFirestore getFirebaseFirestore(){
+        if (firebaseFirestore == null){
+            firebaseFirestore = FirebaseFirestore.getInstance();
+        }
+        return firebaseFirestore;
     }
 
 }
