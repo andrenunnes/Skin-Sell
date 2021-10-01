@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.skinsell.R;
-import com.example.skinsell.adapter.AdapterAnuncios;
+//import com.example.skinsell.adapter.AdapterAnuncios;
 import com.example.skinsell.config.ConfiguracaoFirebase;
 import com.example.skinsell.model.Anuncio;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -24,9 +24,9 @@ import java.util.List;
 public class AnunciosActivity extends AppCompatActivity {
 
     private FirebaseAuth autenticacao;
-    private RecyclerView recyclerViewAnuncio;
+    //private RecyclerView recyclerViewAnuncio;
     private FloatingActionButton botaoAdcionarAnuncio;
-    private List<Anuncio> listaAnuncios = new ArrayList<>();
+    //private List<Anuncio> listaAnuncios = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,19 +39,19 @@ public class AnunciosActivity extends AppCompatActivity {
         verificarUsuario();
         //autenticacao.signOut();
 
-        recyclerViewAnuncio = findViewById(R.id.recyclerViewAnuncios);
+        //recyclerViewAnuncio = findViewById(R.id.recyclerViewAnuncios);
 
         //ListaAnuncios
-        this.criarAnuncios();
+        //this.criarAnuncios();
 
         //Adapter
-        AdapterAnuncios adapterAnuncios = new AdapterAnuncios(listaAnuncios);
+        /*AdapterAnuncios adapterAnuncios = new AdapterAnuncios(listaAnuncios);
 
         //Recycle
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerViewAnuncio.setLayoutManager(layoutManager);
         recyclerViewAnuncio.setHasFixedSize(true);
-        recyclerViewAnuncio.setAdapter(adapterAnuncios);
+        recyclerViewAnuncio.setAdapter(adapterAnuncios);*/
 
         botaoAdcionarAnuncio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +62,7 @@ public class AnunciosActivity extends AppCompatActivity {
 
     }
 
-    public void criarAnuncios(){
+    /*public void criarAnuncios(){
         Anuncio anuncio = new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
         Anuncio anuncio1 = new Anuncio("https://i.etsystatic.com/23459530/r/il/af0251/2412165606/il_1140xN.2412165606_dd7t.jpg ","Karambit Lore", "R$4000.00");
         Anuncio anuncio2 = new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
@@ -77,7 +77,7 @@ public class AnunciosActivity extends AppCompatActivity {
         this.listaAnuncios.add(anuncio4);
         this.listaAnuncios.add(anuncio5);
 
-    }
+    }*/
 
     public void verificarUsuario(){
         if (autenticacao.getCurrentUser() == null){

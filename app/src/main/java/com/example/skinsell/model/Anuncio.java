@@ -7,31 +7,67 @@ import android.widget.TextView;
 import com.example.skinsell.config.ConfiguracaoFirebase;
 import com.google.firebase.database.DatabaseReference;
 
+import java.util.List;
+
 public class Anuncio {
-    private String foto;
+    private String idAnuncio;
+    private String arma;
+    private String categoria;
+    private String stattrack;
     private String titulo;
     private String preco;
+    private String telefone;
+    private String descricao;
+    private List<String> fotos;
+
 
     public Anuncio(){
-
+        DatabaseReference anuncioRef = ConfiguracaoFirebase.getFirebaseDatabase()
+                .child("meus_anuncios");
+        setIdAnuncio(anuncioRef.push().getKey());
     }
 
+    public void salvar(){
 
-    public Anuncio(String foto, String titulo, String preco) {
-        this.foto = foto;
-        this.titulo = titulo;
-        this.preco = preco;
+        String idUsuario = ConfiguracaoFirebase.getIdUsuario();
+        DatabaseReference anuncioRef = ConfiguracaoFirebase.getFirebaseDatabase()
+                .child("meus_anuncios");
+
+        anuncioRef.child(idUsuario)
+                .child(getIdAnuncio())
+                .setValue(this);
     }
 
-    public Anuncio(String titulo, String preco) {
+    public String getIdAnuncio() {
+        return idAnuncio;
     }
 
-    public String getFoto() {
-        return foto;
+    public void setIdAnuncio(String idAnuncio) {
+        this.idAnuncio = idAnuncio;
     }
 
-    public void setFoto(String foto) {
-        this.foto = foto;
+    public String getArma() {
+        return arma;
+    }
+
+    public void setArma(String arma) {
+        this.arma = arma;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getStattrack() {
+        return stattrack;
+    }
+
+    public void setStattrack(String stattrack) {
+        this.stattrack = stattrack;
     }
 
     public String getTitulo() {
@@ -48,5 +84,29 @@ public class Anuncio {
 
     public void setPreco(String preco) {
         this.preco = preco;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public List<String> getFotos() {
+        return fotos;
+    }
+
+    public void setFotos(List<String> fotos) {
+        this.fotos = fotos;
     }
 }

@@ -1,5 +1,5 @@
 package com.example.skinsell.adapter;
-
+/*
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +37,6 @@ public class AdapterAnuncios extends RecyclerView.Adapter<AdapterAnuncios.MyView
         Anuncio anuncio = listaAnuncios.get(position);
         holder.titulo.setText(anuncio.getTitulo());
         holder.preco.setText(anuncio.getPreco());
-        Picasso.get().load(anuncio.getFoto()).into(holder.foto);
 
     }
 
@@ -61,6 +60,6 @@ public class AdapterAnuncios extends RecyclerView.Adapter<AdapterAnuncios.MyView
         }
     }
 
-}
+}*/
 
 

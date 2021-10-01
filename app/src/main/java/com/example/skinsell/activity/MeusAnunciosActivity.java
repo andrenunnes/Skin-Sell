@@ -13,7 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MeusAnunciosActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerViewAnuncios;
+    //private RecyclerView recyclerViewAnuncios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +28,12 @@ public class MeusAnunciosActivity extends AppCompatActivity {
             }
         });
 
-        recyclerViewAnuncios = findViewById(R.id.recyclerViewMeusAnuncios);
+        /*recyclerViewAnuncios = findViewById(R.id.recyclerViewMeusAnuncios);
 
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerViewAnuncios.setLayoutManager(layoutManager);
-        recyclerViewAnuncios.setHasFixedSize(true);
+        recyclerViewAnuncios.setHasFixedSize(true);*/
 
 
     }
