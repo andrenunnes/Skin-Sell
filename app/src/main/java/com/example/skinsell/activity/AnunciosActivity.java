@@ -24,9 +24,9 @@ import java.util.List;
 public class AnunciosActivity extends AppCompatActivity {
 
     private FirebaseAuth autenticacao;
-    //private RecyclerView recyclerViewAnuncio;
+    private RecyclerView recyclerViewAnuncio;
     private FloatingActionButton botaoAdcionarAnuncio;
-    //private List<Anuncio> listaAnuncios = new ArrayList<>();
+    private List<Anuncio> listaAnuncios = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,24 +34,17 @@ public class AnunciosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_anuncios);
 
         botaoAdcionarAnuncio = findViewById(R.id.floatingActionButtonAnuncio);
+        recyclerViewAnuncio = findViewById(R.id.recyclerViewAnuncios);
 
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         verificarUsuario();
         //autenticacao.signOut();
 
-        //recyclerViewAnuncio = findViewById(R.id.recyclerViewAnuncios);
+        //AdapterAnuncios adapterAnuncios = new AdapterAnuncios();
+        //recyclerViewAnuncio.setLayoutManager(new LinearLayoutManager(this));
+        //recyclerViewAnuncio.setHasFixedSize(true);
+        //recyclerViewAnuncio.setAdapter(adapterAnuncios);
 
-        //ListaAnuncios
-        //this.criarAnuncios();
-
-        //Adapter
-        /*AdapterAnuncios adapterAnuncios = new AdapterAnuncios(listaAnuncios);
-
-        //Recycle
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerViewAnuncio.setLayoutManager(layoutManager);
-        recyclerViewAnuncio.setHasFixedSize(true);
-        recyclerViewAnuncio.setAdapter(adapterAnuncios);*/
 
         botaoAdcionarAnuncio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,22 +55,6 @@ public class AnunciosActivity extends AppCompatActivity {
 
     }
 
-    /*public void criarAnuncios(){
-        Anuncio anuncio = new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
-        Anuncio anuncio1 = new Anuncio("https://i.etsystatic.com/23459530/r/il/af0251/2412165606/il_1140xN.2412165606_dd7t.jpg ","Karambit Lore", "R$4000.00");
-        Anuncio anuncio2 = new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
-        Anuncio anuncio3= new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
-        Anuncio anuncio4= new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
-        Anuncio anuncio5= new Anuncio("https://aceskins.com.br/wp-content/uploads/2021/03/fgeNQyR.png", "AK -47 Asiimov", "R$370.00");
-
-        this.listaAnuncios.add(anuncio);
-        this.listaAnuncios.add(anuncio1);
-        this.listaAnuncios.add(anuncio2);
-        this.listaAnuncios.add(anuncio3);
-        this.listaAnuncios.add(anuncio4);
-        this.listaAnuncios.add(anuncio5);
-
-    }*/
 
     public void verificarUsuario(){
         if (autenticacao.getCurrentUser() == null){

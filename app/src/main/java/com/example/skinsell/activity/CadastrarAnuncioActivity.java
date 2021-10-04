@@ -30,14 +30,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import dmax.dialog.SpotsDialog;
 
 public class CadastrarAnuncioActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -46,6 +45,7 @@ public class CadastrarAnuncioActivity extends AppCompatActivity implements View.
     private Spinner campoArma, campoCategoria, campoStatTrack;
     private Anuncio anuncio;
     private StorageReference firebaseStorage;
+    private android.app.AlertDialog dialog;
 
     private ImageView imagem1, imagem2, imagem3;
 
@@ -77,6 +77,13 @@ public class CadastrarAnuncioActivity extends AppCompatActivity implements View.
     }
 
     public void salvarAnuncio(){
+        dialog = new SpotsDialog.Builder()
+                .setContext(this)
+                .setMessage("Salvando Anúncio")
+                .setCancelable(false)
+                .build();
+        dialog.show();
+
         //Salvar imagem no Storage
         for (int i = 0; i < listaFotosRecuperadas.size(); i++){
             String urlImagem = listaFotosRecuperadas.get(i);
@@ -109,6 +116,9 @@ public class CadastrarAnuncioActivity extends AppCompatActivity implements View.
                        if (totalFotos == listaURLFotos.size()){
                            anuncio.setFotos(listaURLFotos);
                            anuncio.salvar();
+
+                           dialog.dismiss();
+                           finish();
                        }
                     }
                 });

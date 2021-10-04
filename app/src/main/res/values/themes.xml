@@ -20,7 +20,7 @@
     </style>
 
     <style name="botaoPadrao">
-        <item name="android:textColor"> @color/white</item>
+        <item name="android:textColor">@color/white</item>
         <item name="backgroundColor">#F7A440</item>
     </style>
 
