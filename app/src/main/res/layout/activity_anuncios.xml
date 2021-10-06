@@ -7,16 +7,66 @@
     android:background="@color/cinzaEscuro"
     tools:context=".activity.AnunciosActivity">
 
-  <androidx.recyclerview.widget.RecyclerView
-      android:id="@+id/recyclerViewAnuncios"
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
+      android:layout_margin="8dp"
+      android:orientation="vertical">
 
-  </androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <Button
+          android:id="@+id/botaoArmas"
+          style="?attr/buttonBarButtonStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="filtrarPorArmas"
+          android:text="Armas" />
+
+      <TextView
+          android:id="@+id/textView5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="|"
+          android:textColor="@color/white" />
+
+      <Button
+          android:id="@+id/botaoCategoria"
+          style="?attr/buttonBarButtonStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="filtrarPorCategoria"
+          android:text="Categoria" />
+
+      <TextView
+          android:id="@+id/textView6"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="|"
+          android:textColor="@color/white" />
+
+      <Button
+          android:id="@+id/botaoSattrack"
+          style="?attr/buttonBarButtonStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="filtrarPorTipo"
+          android:text="Tipo" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAnuncios"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+  </LinearLayout>
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/floatingActionButtonAnuncio"
