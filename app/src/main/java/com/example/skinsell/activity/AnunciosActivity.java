@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.example.skinsell.R;
 import com.example.skinsell.adapter.AdapterAnuncio;
 import com.example.skinsell.config.ConfiguracaoFirebase;
+import com.example.skinsell.helper.RecyclerItemClickListener;
 import com.example.skinsell.model.Anuncio;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -59,13 +61,6 @@ public class AnunciosActivity extends AppCompatActivity {
 
         inicializarComponentes();
 
-        recyclerViewAnuncios.setLayoutManager(new LinearLayoutManager(this));
-        recyclerViewAnuncios.setHasFixedSize(true);
-        adapterAnuncio = new AdapterAnuncio(listAnuncios, this);
-        recyclerViewAnuncios.setAdapter(adapterAnuncio);
-
-
-
         //Configurações iniciais
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         verificarUsuario();
@@ -73,8 +68,38 @@ public class AnunciosActivity extends AppCompatActivity {
         anunciosPublicosRef = ConfiguracaoFirebase.getFirebaseDatabase()
                 .child("anuncios");
 
+        recyclerViewAnuncios.setLayoutManager(new LinearLayoutManager(this));
+        recyclerViewAnuncios.setHasFixedSize(true);
+        adapterAnuncio = new AdapterAnuncio(listAnuncios, this);
+        recyclerViewAnuncios.setAdapter(adapterAnuncio);
 
         recuperarAnunciosPublicos();
+
+        //Evento de clique
+        recyclerViewAnuncios.addOnItemTouchListener(new RecyclerItemClickListener(this, recyclerViewAnuncios, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Anuncio anuncioSelecionado = listAnuncios.get(position);
+                Intent intent = new Intent(AnunciosActivity.this, DetalhesSkinsActivity.class);
+                intent.putExtra("anuncioSelecionado", anuncioSelecionado);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onLongItemClick(View view, int position) {
+
+            }
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        }));
+
+
+
+
+
 
 
 

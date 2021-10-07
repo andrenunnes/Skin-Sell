@@ -46,6 +46,9 @@ public class MeusAnunciosActivity extends AppCompatActivity {
 
         inicializarComponentes();
 
+        //Tooblbar
+        getSupportActionBar().setTitle("Meus anúnicios");
+
 
         FloatingActionButton fab = findViewById(R.id.botaoCadastrar);
         fab.setOnClickListener(new View.OnClickListener() {

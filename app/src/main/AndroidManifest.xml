@@ -16,11 +16,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SkinSell">
         <activity
+            android:name=".activity.DetalhesSkinsActivity"
+            android:exported="true"
+            android:parentActivityName=".activity.AnunciosActivity"/>
+        <activity
             android:name=".activity.CadastrarAnuncioActivity"
             android:exported="true" />
         <activity
             android:name=".activity.MeusAnunciosActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".activity.AnunciosActivity"/>
         <activity
             android:name=".activity.MainActivity"
             android:exported="true" />
