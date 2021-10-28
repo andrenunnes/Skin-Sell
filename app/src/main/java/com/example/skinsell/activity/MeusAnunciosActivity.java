@@ -9,10 +9,12 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 
 import com.example.skinsell.R;
 import com.example.skinsell.adapter.AdapterAnuncio;
 import com.example.skinsell.config.ConfiguracaoFirebase;
+import com.example.skinsell.helper.RecyclerItemClickListener;
 import com.example.skinsell.model.Anuncio;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
@@ -65,6 +67,26 @@ public class MeusAnunciosActivity extends AppCompatActivity {
 
         //Recupera o anuncio para o usuario
         recuperarAnuncio();
+
+        recyclerViewMeusAnuncios.addOnItemTouchListener(new RecyclerItemClickListener(this, recyclerViewMeusAnuncios, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Anuncio anuncioSelecionado = anuncios.get(position);
+                Intent intent = new Intent(MeusAnunciosActivity.this, EditarAnuncioActivity.class);
+                intent.putExtra("anuncioSelecionado", anuncioSelecionado);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onLongItemClick(View view, int position) {
+
+            }
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        }));
 
 
 

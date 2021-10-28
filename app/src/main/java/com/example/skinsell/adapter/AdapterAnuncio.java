@@ -15,7 +15,9 @@ import com.example.skinsell.model.Anuncio;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 public class AdapterAnuncio extends RecyclerView.Adapter<AdapterAnuncio.MyViewHolder> {
 
@@ -36,10 +38,12 @@ public class AdapterAnuncio extends RecyclerView.Adapter<AdapterAnuncio.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        NumberFormat precoFormat = NumberFormat.getCurrencyInstance(new Locale("pt","BR"));
 
         Anuncio anuncio = anuncios.get(position);
         holder.titulo.setText(anuncio.getTitulo());
-        holder.preco.setText(anuncio.getPreco());
+        holder.preco.setText(precoFormat.format(Double.parseDouble(anuncio.getPreco())));
+
 
         //Primeira imagem
         List<String> urlFotos = anuncio.getFotos();

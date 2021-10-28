@@ -16,6 +16,9 @@ import com.squareup.picasso.Picasso;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class DetalhesSkinsActivity extends AppCompatActivity {
 
     private CarouselView carouselView;
@@ -50,12 +53,14 @@ public class DetalhesSkinsActivity extends AppCompatActivity {
         //Recuperar anuncio para exibição
         anuncioSelecionado = (Anuncio) getIntent().getSerializableExtra("anuncioSelecionado");
 
+        NumberFormat precoFormat = NumberFormat.getCurrencyInstance(new Locale("pt","BR"));
+
         if (anuncioSelecionado != null){
             titulo.setText(anuncioSelecionado.getTitulo());
             descricao.setText(anuncioSelecionado.getDescricao());
             categoria.setText(anuncioSelecionado.getCategoria());
             stattrack.setText(anuncioSelecionado.getStattrack());
-            preco.setText(anuncioSelecionado.getPreco());
+            preco.setText(precoFormat.format(Double.parseDouble(anuncioSelecionado.getPreco())));
 
             ImageListener imageListener = new ImageListener() {
                 @Override

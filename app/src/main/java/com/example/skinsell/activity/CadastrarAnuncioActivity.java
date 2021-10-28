@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.example.skinsell.R;
 import com.example.skinsell.config.ConfiguracaoFirebase;
+import com.example.skinsell.config.Mask;
 import com.example.skinsell.helper.Permissao;
 import com.example.skinsell.model.Anuncio;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -35,7 +36,6 @@ import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import dmax.dialog.SpotsDialog;
 
 public class CadastrarAnuncioActivity extends AppCompatActivity implements View.OnClickListener{
@@ -271,6 +271,9 @@ public class CadastrarAnuncioActivity extends AppCompatActivity implements View.
         campoTelefone = findViewById(R.id.editText_telefone);
         campoDescricao = findViewById(R.id.editText_descricao);
         buttonCadastroAnuncio = findViewById(R.id.button_cadastrarAnuncio);
+
+        campoTelefone.addTextChangedListener(Mask.insert("(##)#####-####", campoTelefone));
+
 
         campoArma = findViewById(R.id.spinnerArma);
         campoCategoria = findViewById(R.id.spinnerCategoria);

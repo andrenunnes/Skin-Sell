@@ -7,7 +7,7 @@
     android:layout_marginBottom="6dp"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".activity.CadastrarAnuncioActivity"
+    tools:context=".activity.EditarAnuncioActivity"
     tools:ignore="MissingClass">
 
     <LinearLayout
@@ -106,6 +106,5 @@
         android:id="@+id/button_cadastrarAnuncio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="validarDadosAnuncio"
-        android:text="Cadastrar anúncio" />
+        android:text="Atualizar anúncio" />
 </LinearLayout>
