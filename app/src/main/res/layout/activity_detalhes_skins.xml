@@ -95,6 +95,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:text="Ver Telefone" />
+        android:text="Whatsapp" />
 
 </LinearLayout>

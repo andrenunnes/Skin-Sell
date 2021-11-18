@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="cinza">#AAAAAA</color>
     <color name="cinzaEscuro">#393E46</color>
+    <color name="laranjaEscuro">#F7A440</color>
 </resources>

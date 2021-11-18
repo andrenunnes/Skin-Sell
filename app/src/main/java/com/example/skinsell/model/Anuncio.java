@@ -54,6 +54,31 @@ public class Anuncio implements Serializable {
                 .setValue(this);
     }
 
+    public void remover(){
+        String idUsuario = ConfiguracaoFirebase.getIdUsuario();
+        DatabaseReference anuncioRef = ConfiguracaoFirebase.getFirebaseDatabase()
+                .child("meus_anuncios")
+                .child(idUsuario)
+                .child(getIdAnuncio());
+
+        anuncioRef.removeValue();
+        removerAnuncioPublico();
+    }
+
+    public void removerAnuncioPublico(){
+        DatabaseReference anuncioRef = ConfiguracaoFirebase.getFirebaseDatabase()
+                .child("anuncios")
+                .child(getArma())
+                .child(getCategoria())
+                .child(getStattrack())
+                .child(getIdAnuncio());
+
+        anuncioRef.removeValue();
+
+    }
+
+
+
     public String getIdAnuncio() {
         return idAnuncio;
     }

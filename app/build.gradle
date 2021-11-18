@@ -3,6 +3,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\AndreNunes\\Downloads\\redentor.jks')
+            storePassword 'redentor123'
+            keyAlias 'redentor'
+            keyPassword 'redentor123'
+        }
+    }
     compileSdk 31
 
     defaultConfig {
@@ -19,6 +27,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {

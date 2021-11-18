@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/drawable/background_edittext.xml" value="0.3828125" />
+        <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/drawable/ic_adcionar_anuncio.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/activity_anuncios.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/activity_anuncios_usuario.xml" value="0.3625" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/activity_cadastrar_anuncio.xml" value="0.22" />
@@ -18,6 +19,7 @@
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/dialog_spinner.xml" value="0.3625" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/layout/recycle_anuncios.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/menu/menu_main.xml" value="0.25" />
+        <entry key="..\:/Users/AndreNunes/AndroidStudioProjects/SkinSell/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.37864583333333335" />
       </map>
     </option>
   </component>

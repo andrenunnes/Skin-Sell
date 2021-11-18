@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -68,6 +69,9 @@ public class MeusAnunciosActivity extends AppCompatActivity {
         //Recupera o anuncio para o usuario
         recuperarAnuncio();
 
+        AlertDialog.Builder dialogExcluir = new AlertDialog.Builder(this);
+        dialogExcluir.setTitle("Deseja excluir seu anúncio?");
+
         recyclerViewMeusAnuncios.addOnItemTouchListener(new RecyclerItemClickListener(this, recyclerViewMeusAnuncios, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
@@ -79,6 +83,24 @@ public class MeusAnunciosActivity extends AppCompatActivity {
 
             @Override
             public void onLongItemClick(View view, int position) {
+                dialogExcluir.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Anuncio anuncioSelecionado = anuncios.get(position);
+                        anuncioSelecionado.remover();
+
+                        adapterAnuncio.notifyDataSetChanged();
+                    }
+                });
+                dialogExcluir.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+
+                AlertDialog dialog = dialogExcluir.create();
+                dialog.show();
 
             }
 
