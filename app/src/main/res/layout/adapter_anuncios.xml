@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:background="@drawable/background_edittext"
-    app:cardBackgroundColor="@color/white"
+    app:cardBackgroundColor="@color/bgCard"
     app:cardCornerRadius="5dp">
 
     <LinearLayout
@@ -43,6 +43,7 @@
                 android:layout_marginBottom="14dp"
                 android:gravity="center"
                 android:text="TextView"
+                android:textColor="@color/textoCard"
                 android:textSize="16sp" />
 
             <TextView
@@ -52,6 +53,7 @@
                 android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:text="TextView"
+                android:textColor="@color/textoCard"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
