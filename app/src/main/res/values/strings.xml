@@ -10,8 +10,50 @@
         <item>Berettas Duplas</item>
         <item>Canivete</item>
         <item>Canivete Borboleta</item>
-        <item>M4A4</item>
+        <item>Canivete Falchion</item>
+        <item>Cano Curto</item>
+        <item>CZ75-Auto</item>
+        <item>Desert Eagle</item>
+        <item>Faca Browie</item>
+        <item>Faca Clássica</item>
+        <item>Faca de Cordame</item>
+        <item>Faca de Sobrevivência</item>
+        <item>Faca do Caçador</item>
+        <item>Faca Esqueleto</item>
+        <item>Faca Gut Hook</item>
+        <item>Faca Navaja</item>
+        <item>Faca Nômade</item>
+        <item>Faca Stiletto</item>
+        <item>Faca Talon</item>
+        <item>Faca Ursus</item>
+        <item>FAMAS</item>
+        <item>Five-SeveN</item>
+        <item>G3SG1</item>
+        <item>Galil AR</item>
+        <item>Glock-18</item>
+        <item>Karambit</item>
+        <item>M249</item>
         <item>M4A1-S</item>
+        <item>M4A4</item>
+        <item>MAC-10</item>
+        <item>MAG-7</item>
+        <item>MP5-SD</item>
+        <item>MP7</item>
+        <item>MP9</item>
+        <item>Negev</item>
+        <item>Nova</item>
+        <item>P2000</item>
+        <item>P250</item>
+        <item>P90</item>
+        <item>PP-Bizon</item>
+        <item>Revólver R8</item>
+        <item>SCAR-20</item>
+        <item>SG 553</item>
+        <item>SSG 08</item>
+        <item>Tec-9</item>
+        <item>UMP-45</item>
+        <item>USP-S</item>
+        <item>XM1014</item>
     </string-array>
 
     <string-array name="categoria">
