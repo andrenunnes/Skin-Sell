@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.skinsell.R;
+import com.example.skinsell.config.Shared;
 import com.example.skinsell.model.Anuncio;
 import com.squareup.picasso.Picasso;
 import com.synnapps.carouselview.CarouselView;
@@ -43,11 +44,8 @@ public class DetalhesSkinsActivity extends AppCompatActivity {
 
         inicializarComponentes();
 
-        abrirTelefone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                abrirTelefone(view);
-            }
+        abrirTelefone.setOnClickListener(view -> {
+             { Shared.openWhatsApp(this, anuncioSelecionado.getTelefone(),"Testando"); }
         });
 
         //Recuperar anuncio para exibição
